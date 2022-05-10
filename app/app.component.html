@@ -1,0 +1,21 @@
+<header>
+  <h1>{{title}}</h1>
+</header>
+
+<mat-card>
+ <form [formGroup]="myForm" style="margin-top: 20px">
+    <mat-form-field appearance="outline">
+      <mat-label> Amount</mat-label>
+      <input matInput
+             matInputCommified
+             formControlName="deposit"
+             type="text"/>
+    </mat-form-field>
+  </form>
+  <button [disabled]="myForm.invalid"
+          mat-raised-button
+          color="primary"
+          (click)="onSubmit()"
+  >Submit</button>
+</mat-card>
+
